@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            javascript
+        </title>
+
+    </head>
+    <body>
+        <p>The given below paragraph is written in script</p>
+        <!-- <script src="file.js"></script> -->
+        <script>
+            // alert("Hello Easwar")
+            // alert("How are U?")
+            // "use strict";
+            // alert(1+2+3);
+            // [1,2].forEach(alert);
+            let message;
+            message="Hello Easwar";
+            alert(message);
+            let e="EASWARA";
+            let em=`${e} MOORTHY`;
+            alert(em);
+            //Interaction
+            let age=prompt("How old are U?",21);
+            alert(`your just ${age}`);
+            if(age>=18){
+                alert("Your eligible to vote");
+            }
+            let cnf=confirm("Are You Sure?");
+            alert(cnf);
+            for(let i=0;i<5;i++){
+                alert(i);
+            }
+            let ch=prompt("Enter any",'');
+            switch(ch){
+                case '1':
+                    alert("correct");
+                    break;
+                default:
+                    alert("not correct");
+                    break;
+            }
+            // Function
+            function showMessage(vari){
+                alert(`hi ${vari}`);
+            }
+            for(let i=0;i<5;i++){
+                showMessage(i);
+            }
+            // alert(showMessage);shows functions code
+            function validate(q,y,n){
+                if(confirm(q)){
+                    y();
+                }
+                else{
+                    n();
+                }
+            }
+            function accept(){
+                alert("You accept my proposal");
+            }
+            function decline(){
+                alert("You decline my proposal");
+            }
+            validate("Do you accept or not?",accept,decline);
+            let name=prompt("Enter name","");
+            display(name);
+            function display(n){
+                alert(`hello ${n}`);
+            }
+            // ARROW Expression
+            let a=+prompt("Enter number 1",0);
+            let b=+prompt("Enter number 2",0);
+            let sum=(a,b)=>a+b;
+            alert(`sum is ${sum(a,b)}`);
+            //Object
+            let user={
+                name:"Easwar",
+                place:"Coimbatore",
+                study:"B.E CSE"
+            }
+            for(let k in user){
+                alert(k+":"+user[k]);
+            }
+            let codes = {
+                "49": "Germany",
+                "41": "Switzerland",
+                "44": "Great Britain",
+                "1": "USA"
+            };
+            for (let code in codes) {
+                    alert(code+":"+codes[code]); // 1, 41, 44, 49
+                }
+
+            // Object copy
+            let clone = Object.assign({}, user);
+            alert(clone.name); // John
+            alert(clone.age); // 30
+            // arrays push,pop,shift & unshift
+            let users = [
+                {id: 1, name: "John"},
+                {id: 2, name: "Pete"},
+                {id: 3, name: "Mary"},
+                {id: 4, name: "John"}
+            ];
+            // Find the index of the first John
+            alert(users.findIndex(user => user.name == 'John')); // 0
+            // Find the index of the last John
+            alert(users.findLastIndex(user => user.name == 'John')); // 3
+            </script>
+            <hr>
+        <p>After script</p>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aquamarine;
+}
+
+.container{
+    min-height: 80vh;
+    width:60%;
+    border: 8px solid whitesmoke;
+    margin: 4rem auto;
+    border-radius: 6px;
+    box-shadow: 10px 10px 35px black;
+    position: relative;
+    background: url("images/mt1.jpg") center/cover fixed no-repeat;
+    transition: background 1s ease-in-out;
+}
+
+.btn-left{
+    position: absolute;
+    top: 50%;
+    left: -8%;
+    background-color: white;
+    padding: .4rem .6rem;
+    border-radius: .6em;
+    transform: translateY(calc(-50%));
+    cursor: pointer;
+}
+.btn-right{
+    position: absolute;
+    top: 50%;
+    right: -8%;
+    background-color: white;
+    padding: .4rem .6rem;
+    border-radius: .6em;
+    transform: translateY(calc(-50%));
+    cursor: pointer;
+}
